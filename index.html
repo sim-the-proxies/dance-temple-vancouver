@@ -32,7 +32,6 @@
         "name": "Dance Temple Vancouver",
         "url": "https://dancetemplevancouver.com/",
         "logo": "https://dancetemplevancouver.com/assets/logo-dancer.png",
-        "email": "hello@dancetemplevancouver.com",
         "sameAs": [
           "https://instagram.com/dancetemplevancouver",
           "https://facebook.com/dancetemplevancouver"
@@ -138,14 +137,16 @@
     </section>
 
     <section class="contact section" id="contact">
-      <div class="contact-copy"><div class="section-label section-label-light"><span>05</span> Contact</div><h2>Something<br>on your mind?</h2><p>Questions, collaborations, accessibility needs or just want to say hello? We would love to hear from you.</p><p><a href="mailto:hello@dancetemplevancouver.com">hello@dancetemplevancouver.com</a></p></div>
-      <form class="contact-form" action="mailto:hello@dancetemplevancouver.com" method="post" enctype="text/plain">
+      <div class="contact-copy"><div class="section-label section-label-light"><span>05</span> Contact</div><h2>Something<br>on your mind?</h2><p>Questions, collaborations, accessibility needs or just want to say hello? Send us a note and we will get back to you.</p></div>
+      <form class="contact-form" id="contact-form" action="https://script.google.com/macros/s/AKfycbxjIYxrnARhOuVimfpV2gXaCUdnsebm8f3Qfwp2_0CRE3tC4y0xD2vM2CZEPV_pOhESww/exec" method="post" target="contact-target">
         <label>Name<input name="name" required autocomplete="name"></label>
         <label>Email<input type="email" name="email" required autocomplete="email"></label>
         <label>What’s up?<textarea name="message" rows="4" required></textarea></label>
-        <button class="button button-yellow" type="submit">Send it <span aria-hidden="true">↗</span></button>
-        <p class="form-note">This opens your email app so you can send the message directly.</p>
+        <label class="form-trap" aria-hidden="true">Leave this blank<input name="website" tabindex="-1" autocomplete="off"></label>
+        <button class="button button-yellow" type="submit">Send message <span aria-hidden="true">↗</span></button>
+        <p class="form-note" id="form-status" role="status" aria-live="polite">Your email address stays private and is only used to reply to your message.</p>
       </form>
+      <iframe class="form-target" name="contact-target" title="Contact form response"></iframe>
     </section>
   </main>
   <footer><a class="wordmark wordmark-footer" href="#top"><span>Dance</span><span>Temple</span><small>Vancouver</small></a><p>Come as you are. Leave a little more alive.</p><div><a href="https://instagram.com/dancetemplevancouver">Instagram</a><a href="https://facebook.com/dancetemplevancouver">Facebook</a></div><small>© <span id="year"></span> Dance Temple Vancouver</small></footer>
