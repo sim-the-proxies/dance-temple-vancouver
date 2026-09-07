@@ -9,4 +9,21 @@
 .hero-tape span:after{margin-left:4vw}
 .hero-tape span:last-child:after{display:none}
 @media(max-width:760px){.hero-tape{left:0;right:0;width:100%;margin-left:0;height:auto;min-height:60px;padding:.8rem .35rem;font-size:.58rem;letter-spacing:.1em;clip-path:polygon(0 10%,100% 0,100% 90%,0 100%)}.hero-tape span:after{margin-left:.55rem}}
+.packs{background:var(--pink);border-top:var(--border);border-bottom:var(--border)}
+.packs-intro{max-width:940px}
+.packs-intro h2{font-size:clamp(3.3rem,7vw,8rem);margin-bottom:2rem}
+.packs-intro h2 i{font-family:Georgia,serif;text-transform:none;font-weight:normal;color:var(--cream)}
+.packs-intro .lead{max-width:760px}
+.pack-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2vw;margin-top:4rem}
+.pack-card{position:relative;min-height:390px;padding:2.4rem;border:var(--border);box-shadow:8px 8px 0 var(--teal);display:flex;flex-direction:column;align-items:flex-start}
+.pack-five{background:var(--orange)}.pack-ten{background:var(--blue);color:#fff}.pack-twenty{background:var(--yellow)}
+.pack-flag{position:absolute;right:1rem;top:1rem;margin:0;background:var(--cream);color:var(--teal);border:var(--border);padding:.45rem .7rem;text-transform:uppercase;letter-spacing:.12em;font-size:.6rem;font-weight:bold;transform:rotate(3deg)}
+.pack-count{margin:0;text-transform:uppercase;font-weight:900;line-height:.85;letter-spacing:-.045em;font-size:clamp(2rem,3vw,3.3rem)}
+.pack-count strong{display:block;font-size:clamp(5.5rem,9vw,9rem);line-height:.8}
+.pack-price{margin:2.6rem 0 2rem;font-size:2.2rem;font-weight:900}
+.pack-price span{display:block;font-size:.72rem;text-transform:uppercase;letter-spacing:.12em;font-weight:bold}
+.pack-card .button{margin-top:auto}
+.pack-note{margin:2rem 0 0;font-size:.75rem;font-weight:bold}
+@media(max-width:900px){.pack-grid{grid-template-columns:1fr}.pack-card{min-height:320px}.pack-count strong{font-size:6.5rem}}
+@media(max-width:760px){.packs-intro h2{font-size:clamp(2.9rem,13vw,4.2rem);line-height:.95}.pack-grid{gap:1.8rem;margin-top:3rem}.pack-card{padding:2rem;min-height:300px}.pack-price{margin:1.7rem 0}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
