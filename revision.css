@@ -14,3 +14,18 @@ body{font-family:"Avenir Next",Avenir,"Helvetica Neue",Arial,sans-serif}
 .poster .dancer{display:none}.poster::before{content:"";position:absolute;z-index:1;left:10%;top:10%;width:80%;height:58%;background:url('assets/logo-dancer.png') center/contain no-repeat;filter:drop-shadow(4px 5px 0 rgba(8,63,61,.18))}.card-yellow .poster::before{transform:scaleX(-1);left:8%}.mini-map .water{stroke-width:34}.mini-map .water-label{font-size:9px;letter-spacing:.18em;fill:var(--cream);font-weight:900}
 @media(max-width:1050px){.event-card{grid-template-columns:1fr}.poster{border-bottom:0}.location-grid{grid-template-columns:1fr 1fr}.location-intro{grid-column:1/-1}}
 @media(max-width:760px){.hero-image{background-position:63% center}.event-card{grid-template-columns:1fr}.event-card .poster strong{font-size:clamp(3.8rem,18vw,5.6rem);line-height:.88;letter-spacing:-.06em}.location-grid{grid-template-columns:1fr}.location-intro{grid-column:auto}.location-card{min-height:540px}.dancer{left:50%}.dancer-small{left:12%}}
+
+/* Full-viewport private preview gate */
+html.access-locked,html.access-locked body{width:100%;height:100%;min-height:100%;overflow:hidden!important}
+html.access-locked body{position:fixed;inset:0}
+.access-gate{position:fixed!important;inset:0!important;width:100vw!important;height:100dvh!important;min-height:100vh!important;overflow:auto;overscroll-behavior:contain;display:grid;grid-template-columns:minmax(0,1.08fr) minmax(420px,.92fr);background:var(--cream);z-index:2147483647!important}
+.access-gate-art{min-height:100%;padding:clamp(2rem,5vw,6rem);isolation:isolate}
+.access-gate-art:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 35%,rgba(8,63,61,.3));z-index:0}
+.access-gate-art img{object-position:56% center}
+.access-gate-art p{font-size:clamp(4.5rem,8vw,9.5rem);text-shadow:3px 3px 0 var(--pink)}
+.access-gate-panel{min-height:100%;padding:clamp(3rem,7vw,8rem);justify-content:center;background:var(--cream)}
+.access-gate-mark{margin:0 0 clamp(2.5rem,5vh,4rem)}
+.access-gate h1{font-size:clamp(4rem,6vw,7rem)}
+.access-form{width:100%}
+@media(max-width:900px){.access-gate{grid-template-columns:1fr 1fr}.access-gate-panel{padding:3rem}}
+@media(max-width:760px){html.access-locked body{position:fixed}.access-gate{display:flex;flex-direction:column;height:100dvh!important}.access-gate-art{display:none}.access-gate-panel{flex:1;min-height:100dvh;padding:2rem 7vw;justify-content:center}.access-gate-mark{margin-bottom:2.5rem}.access-gate h1{font-size:clamp(3.7rem,17vw,5.4rem)}.access-gate-copy{max-width:34rem}.access-field{grid-template-columns:1fr}.access-field button{border-left:0;border-top:var(--border);padding:1rem}.access-note{margin-top:2rem}}

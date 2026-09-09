@@ -17,6 +17,8 @@ if(localStorage.getItem(accessKey)===accessHash){
 }else{
   const gate=document.createElement('section');
   gate.className='access-gate';
+  gate.setAttribute('role','dialog');
+  gate.setAttribute('aria-modal','true');
   gate.setAttribute('aria-labelledby','access-title');
   gate.innerHTML=`
     <div class="access-gate-art">
