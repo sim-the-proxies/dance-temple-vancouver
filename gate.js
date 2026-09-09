@@ -21,20 +21,15 @@ if(localStorage.getItem(accessKey)===accessHash){
   gate.setAttribute('aria-modal','true');
   gate.setAttribute('aria-labelledby','access-title');
   gate.innerHTML=`
-    <div class="access-gate-art">
-      <img src="${location.pathname.includes('/events/')?'../':''}assets/dancers-hero.png" alt="">
-      <p>Move<br>freely.</p>
-    </div>
     <div class="access-gate-panel">
       <p class="access-gate-mark">Dance Temple Vancouver · Private preview</p>
-      <h1 id="access-title">Come on in.</h1>
-      <p class="access-gate-copy">We are getting the dance floor ready. Enter the preview password to take a look around.</p>
+      <h1 id="access-title">Private preview</h1>
+      <p class="access-gate-copy">Enter the password to view the website.</p>
       <form class="access-form">
         <label for="preview-password">Preview password</label>
         <div class="access-field"><input id="preview-password" type="password" required autocomplete="current-password"><button type="submit">Enter</button></div>
         <p class="access-error" role="alert" aria-live="polite"></p>
       </form>
-      <p class="access-note">This is a private preview of Dance Temple Vancouver.</p>
     </div>`;
   document.body.prepend(gate);
   const form=gate.querySelector('form');

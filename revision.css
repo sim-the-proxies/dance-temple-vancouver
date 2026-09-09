@@ -29,3 +29,11 @@ html.access-locked body{position:fixed;inset:0}
 .access-form{width:100%}
 @media(max-width:900px){.access-gate{grid-template-columns:1fr 1fr}.access-gate-panel{padding:3rem}}
 @media(max-width:760px){html.access-locked body{position:fixed}.access-gate{display:flex;flex-direction:column;height:100dvh!important}.access-gate-art{display:none}.access-gate-panel{flex:1;min-height:100dvh;padding:2rem 7vw;justify-content:center}.access-gate-mark{margin-bottom:2.5rem}.access-gate h1{font-size:clamp(3.7rem,17vw,5.4rem)}.access-gate-copy{max-width:34rem}.access-field{grid-template-columns:1fr}.access-field button{border-left:0;border-top:var(--border);padding:1rem}.access-note{margin-top:2rem}}
+
+/* Simple site overlay: keep the preview visible behind the password prompt. */
+.access-locked body>*:not(.access-gate){pointer-events:none}
+html.access-locked body{position:static;overflow:hidden!important}
+.access-gate{display:grid!important;place-items:center!important;padding:1.5rem;background:rgba(8,46,44,.72)!important;backdrop-filter:blur(5px);-webkit-backdrop-filter:blur(5px)}
+.access-gate-panel{width:min(100%,560px);min-height:0;padding:clamp(2rem,5vw,4rem);display:block;background:var(--cream);border:var(--border);box-shadow:12px 12px 0 var(--pink)}
+.access-gate-mark{margin:0 0 2.5rem}.access-gate h1{font-size:clamp(3rem,5vw,5rem);margin-bottom:1rem}.access-gate-copy{margin-bottom:2rem}.access-gate-art,.access-note{display:none!important}
+@media(max-width:760px){.access-gate{display:grid!important;padding:1rem}.access-gate-panel{width:100%;min-height:0;padding:2rem;box-shadow:7px 7px 0 var(--pink)}.access-gate-mark{margin-bottom:2rem}.access-gate h1{font-size:clamp(2.8rem,13vw,4rem)}.access-field{grid-template-columns:1fr}.access-field button{border-left:0;border-top:var(--border);padding:1rem}}
