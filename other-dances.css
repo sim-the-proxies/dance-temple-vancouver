@@ -1,0 +1,12 @@
+.guide-back{text-transform:uppercase;text-decoration:none;font-weight:800;font-size:.75rem;letter-spacing:.1em}
+.guide-hero{padding:7rem 5vw;background:var(--teal);color:#fff;display:grid;grid-template-columns:1.5fr .8fr;gap:8vw;align-items:end}
+.guide-hero h1,.guide-cta h2{font-family:"Arial Black",Impact,"Avenir Next",sans-serif;font-size:clamp(4rem,8vw,9rem);line-height:.8;letter-spacing:-.075em;text-transform:uppercase;margin:2rem 0 0}
+.guide-hero h1 i{font-family:Georgia,serif;text-transform:none;font-weight:normal;color:var(--yellow)}
+.guide-notice{border:2px solid #fff;padding:2rem;background:var(--blue);box-shadow:8px 8px 0 var(--pink)}
+.guide-notice strong,.guide-card .role{text-transform:uppercase;letter-spacing:.13em;font-size:.75rem}
+.guide-list{padding:6rem 5vw;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2rem}
+.guide-card{min-height:440px;border:var(--border);box-shadow:8px 8px 0 var(--teal);padding:3rem;display:flex;flex-direction:column}
+.guide-card h2{font-family:"Arial Black",Impact,"Avenir Next",sans-serif;font-size:clamp(3rem,5vw,6rem);line-height:.86;letter-spacing:-.06em;text-transform:uppercase;margin:2rem 0}
+.guide-card a{margin-top:auto;font-weight:800}.pink-card{background:var(--pink)}.yellow-card{background:var(--yellow)}.blue-card{background:var(--blue);color:#fff}.cream-card{background:var(--cream)}.orange-card{background:var(--orange)}
+.guide-cta{padding:8rem 5vw;background:var(--yellow);display:grid;grid-template-columns:1.2fr .8fr;gap:5vw}.guide-cta h2{grid-row:1/4}.guide-cta .section-label{align-self:end}.guide-cta .button{align-self:start;justify-self:start}
+@media(max-width:760px){.guide-back{font-size:.65rem}.guide-hero,.guide-list,.guide-cta{grid-template-columns:1fr}.guide-hero{padding:5rem 5vw}.guide-hero h1,.guide-cta h2{font-size:clamp(3.2rem,15vw,5.2rem);line-height:.92}.guide-list{padding:4rem 5vw}.guide-card{min-height:360px;padding:2rem}.guide-cta h2{grid-row:auto}}
