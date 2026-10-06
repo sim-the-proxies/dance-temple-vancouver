@@ -20,3 +20,13 @@ body{font-family:"Avenir Next",Avenir,"Helvetica Neue",Arial,sans-serif}
 .poster .dancer{display:none}.poster::before{content:"";position:absolute;z-index:1;left:10%;top:10%;width:80%;height:58%;background:url('assets/logo-dancer.png') center/contain no-repeat;filter:drop-shadow(4px 5px 0 rgba(8,63,61,.18))}.card-yellow .poster::before{transform:scaleX(-1);left:8%}.mini-map .water{stroke-width:34}.mini-map .water-label{font-size:9px;letter-spacing:.18em;fill:var(--cream);font-weight:900}
 @media(max-width:1050px){.event-card{grid-template-columns:1fr}.poster{border-bottom:0}.location-grid{grid-template-columns:1fr 1fr}.location-intro{grid-column:1/-1}}
 @media(max-width:760px){.hero-image{background-position:63% center}.event-card{grid-template-columns:1fr}.event-card .poster strong{font-size:clamp(3.8rem,18vw,5.6rem);line-height:.88;letter-spacing:-.06em}.location-grid{grid-template-columns:1fr}.location-intro{grid-column:auto}.location-card{min-height:540px}.dancer{left:50%}.dancer-small{left:12%}.city-guide{grid-template-columns:1fr}.temple-network-intro{position:static}.temple-link{min-height:190px;padding:1.35rem}.temple-link strong{font-size:clamp(2rem,11vw,3.4rem)}.temple-link em{align-self:end}}
+
+/* Responsive overflow repair: keep the ticker and event posters inside their columns. */
+html,body{max-width:100%;overflow-x:clip}
+.hero-tape{left:0;right:0;width:100%;max-width:100%;overflow:hidden}
+.hero-tape span{min-width:0}
+.event-grid,.event-card,.poster,.event-info{min-width:0}
+.event-card{grid-template-columns:minmax(220px,.95fr) minmax(0,1.05fr)}
+.poster strong{max-width:calc(100% - 2.6rem);font-size:clamp(3.2rem,4vw,4.8rem);line-height:.82;letter-spacing:-.075em}
+@media(max-width:1050px){.event-card{grid-template-columns:1fr}.poster strong{font-size:clamp(3.6rem,9vw,5.6rem)}}
+@media(max-width:760px){.event-card .poster strong{font-size:clamp(3.4rem,17vw,5.2rem);max-width:calc(100% - 2.6rem)}}
